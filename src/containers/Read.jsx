@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 export default connect(
     function(state){
         var title, desc;
+        var state = state.slice;
         if(state.mode === 'WELCOME'){
             title = state.welcome_content.title;
             desc = state.welcome_content.desc;

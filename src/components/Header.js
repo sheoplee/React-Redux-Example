@@ -1,5 +1,7 @@
 import React, {Component} from "react";
 import {connect} from 'react-redux'
+import counterSlice, {WELCOME, down, set, step} from '../sliceStore';
+import {useDispatch, useSelector} from 'react-redux';
 
 class Header extends Component {
   render () {
@@ -18,7 +20,7 @@ class Header extends Component {
 export default connect(null, function(dispatch){
   return {
     onClick: function(){
-      dispatch({type:'WELCOME'})
+      dispatch({type:'sliceStore/WELCOME'})
     }
   }
 })(Header);

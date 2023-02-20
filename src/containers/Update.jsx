@@ -4,6 +4,7 @@ import Update from '../components/Update';
 export default connect(
     function(state){
         var id, title, desc;
+        var state = state.slice;
         for(var i=0; i<state.contents.length; i++){
             var d = state.contents[i];
             if(d.id === state.selected_id){
@@ -19,7 +20,7 @@ export default connect(
     function(dispatch){
         return{
             onSubmit:function(id, title, desc){
-                dispatch({type:'UPDATE_PROCESS', id, title, desc});
+                dispatch({type:'sliceStore/UPDATE_PROCESS', id, title, desc});
             }
         };
     }

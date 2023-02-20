@@ -6,7 +6,7 @@ export default connect(
     function(dispatch){
         return {
             onSubmit:function(title, desc){
-                dispatch({type:'CREATE_PROCESS', title, desc});
+                dispatch({type:'sliceStore/CREATE_PROCESS', title, desc});
             }
         };
     }

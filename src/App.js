@@ -3,7 +3,7 @@ import Header from './components/Header';
 import NavContainer from './containers/Nav';
 import Read from './containers/Read';
 import Control from './containers/Control';
-import { connect } from 'react-redux';
+import { connect} from 'react-redux';
 import { Component } from 'react';
 import Create from './containers/Create';
 import Update from './containers/Update';
@@ -34,6 +34,12 @@ class App extends Component {
 
 export default connect(
   function(state){
-    return {mode:state.mode}
+    //debugger;
+    // const mode = useSelector(state=>{
+    //   return state.slice.mode;
+    // });
+    // console.log(mode);
+    
+    return {mode:state.slice.mode}
   }
 )(App);
